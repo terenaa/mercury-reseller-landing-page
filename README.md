@@ -209,6 +209,11 @@ dlp_mail:
     secret: ~
 ```
 
+### Generating
+```bash
+$ vendor/bin/sculpin generate --env=prod
+```
+
 ## Features
 * Fully responsive
 * HTML5 + CSS3
