@@ -12,7 +12,7 @@ Mercury is a free responsive domain reseller landing page. The project has also 
 
 ## Installation
 ```bash
-$ git clone https://github.com/terenaa/... domain_landing_page
+$ git clone https://github.com/terenaa/mercury-reseller-landing-page.git domain_landing_page
 $ cd domain_landing_page
 $ composer install
 ```
