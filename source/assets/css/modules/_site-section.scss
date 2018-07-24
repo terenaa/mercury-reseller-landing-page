@@ -1,0 +1,51 @@
+@import "../variables";
+
+.site-section {
+  margin-top: 3em;
+
+  @media screen and (min-width: $size-sm + 1) {
+    margin-top: 5em;
+  }
+
+  @media screen and (min-width: $size-2x + 1) {
+    max-width: $size-md;
+  }
+
+  &__header {
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 1.45rem;
+    }
+
+    @media screen and (min-width: $size-md + 1) {
+      font-size: 1.6rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 25%;
+      bottom: -0.5rem;
+      height: 1px;
+      width: 50%;
+      background: $site-section-header-border-color;
+    }
+  }
+
+  &__card-container {
+      & + & {
+        margin-top: 1rem;
+      }
+
+      @media screen and (min-width: $size-sm + 1) and (max-width: $size-md) {
+        margin-top: 0 !important;
+      }
+
+      @media screen and (min-width: $size-xl + 1) {
+        margin-top: 0 !important;
+      }
+  }
+}

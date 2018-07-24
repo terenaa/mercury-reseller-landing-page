@@ -1,0 +1,26 @@
+{% if site.why_this_domain.visible %}
+    <section class="site-section">
+        <header>
+            <h2 class="site-section__header text-center text-primary">{{ site.why_this_domain.header }}</h2>
+        </header>
+
+        {% if site.why_this_domain.description %}
+            <p class="text-description text-center">{{ site.why_this_domain.description }}</p>
+        {% endif %}
+
+        {% if site.why_this_domain.pros %}
+            <div class="columns pros">
+                {% for pros in site.why_this_domain.pros|slice(0, 3) %}
+                    <div class="column col-xs-12 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-4 text-center site-section__card-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title h5 pros__header">{{ pros.header }}</div>
+                            </div>
+                            <div class="card-body pros__description">{{ pros.description }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+{% endif %}

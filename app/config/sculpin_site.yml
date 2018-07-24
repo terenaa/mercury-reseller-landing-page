@@ -1,0 +1,91 @@
+lang: en
+
+domain:
+  name: example.com
+  title: is for sale
+  description: Lorem ipsum dolor sit amet.
+  price: 128
+  currency: USD
+
+buy_now:
+  button: Buy now for %domain.price% %domain.currency%
+
+form:
+  visible: true
+  header: Interested in this domain?
+  description: Lorem ipsum dolor sit amet
+  fields:
+    name:
+      text: What's your name?
+      required: true
+    email:
+      text: What's your email?
+      required: true
+    phone:
+      text: What's your phone number?
+      required: false
+    offer:
+      text: Offer price in %domain.currency%
+      required: true
+    comments:
+      text: Any additional comments?
+      required: false
+  buttons:
+    make_offer:
+      text: Make an offer
+  optional: (optional)
+  success_message: Your message has been sent successfully.
+  error_message: Ooops! Something went wrong.
+  go_back_button: Go back
+  recaptcha:
+
+    # Public key of ReCaptcha only if form section is visible and ReCaptcha is enabled
+    public_key: ~
+
+why_this_domain:
+  visible: false
+  header: Why %domain.name%?
+  description: lorem ipsum
+  pros:
+    -
+      header: long & hard
+      description: Lorem ipsum dolor.
+    -
+      header: 5+ backlinks
+      description: Lorem ipsum dolor.
+    -
+      header: 89 years old
+      description: Lorem ipsum dolor.
+
+did_you_know:
+  visible: true
+  header: Did you know?
+  facts:
+    -
+      header: Lorem ipsum dolor...
+      description: Lorem ispum dolor sit amet...
+    -
+      header: Lorem ipsum dolor...
+      description: Lorem ispum dolor sit amet...
+    -
+      header: Lorem ipsum dolor...
+      description: Lorem ispum dolor sit amet...
+  provided_by: '* Figures provided by XXX'
+
+contact:
+  visible: false
+  channels:
+    -
+      type: phone
+      account: +1 000 000 000
+    -
+      type: mail
+      account: domains@example.pl
+
+footer:
+  visible: false
+
+cookie_message: 'This website uses cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com">Learn more</a>'
+
+robots:
+  allow_indexing: false

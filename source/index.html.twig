@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="columns">
+        <section class="column col-md-12 col-6 buy-now">
+            <div class="columns">
+                <div class="column col-md-10 col-xl-11 col-10 col-mx-auto">
+                    <header>
+                        <h1 class="text-center buy-now__domain-header">
+                            <span class="buy-now__domain-name text-primary">{{ site.domain.name }}</span>
+                            <br>
+                            <span>{{ site.domain.title }}</span>
+                        </h1>
+                    </header>
+                    <p class="text-description text-center">{{ site.domain.description }}</p>
+
+                    {% if site.buy_now.button %}
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-lg" data-price="{{ site.domain.price }}" id="buy-now-btn">{{ site.buy_now.button }}</button>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        <div class="column col-md-12 col-ml-auto col-6">
+            <div class="columns">
+                <div class="column col-xs-12 col-md-8 col-mx-auto col-10">
+                    {# Form #}
+                    {% include 'offer_form.html.twig' %}
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column col-xs-12 col-mx-auto col-11">
+                    {# Pros #}
+                    {% include 'pros.html.twig' %}
+
+                    {# Did you know? #}
+                    {% include 'did_you_know.html.twig' %}
+
+                    {# Contact #}
+                    {% include 'contact.html.twig' %}
+
+                    {# Footer #}
+                    {% include 'footer.html.twig' %}
+
+                    {# Cookies information #}
+                    {% include 'cookies.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%  if site.buy_now.button %}
+    <script src="{{ theme_path('assets/js/buy-now.js') }}"></script>
+{% endif %}
+
+{% if site.form.recaptcha.public_key %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="{{ theme_path('assets/js/recaptcha.js') }}"></script>
+{% endif %}

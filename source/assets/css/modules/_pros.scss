@@ -1,0 +1,11 @@
+@import "../utilities";
+
+.pros {
+  &__header {
+    font-weight: 700;
+  }
+
+  &__description {
+    @extend %text-description;
+  }
+}

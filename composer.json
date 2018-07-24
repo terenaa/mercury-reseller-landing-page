@@ -1,0 +1,13 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "sculpin/sculpin": "^2.1",
+    "devworks/sculpin-scss-bundle": "^0.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "EternalApps\\Sculpin\\Bundle\\DlpMailBundle\\": "mail/"
+    }
+  }
+}

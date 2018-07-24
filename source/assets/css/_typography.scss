@@ -1,0 +1,11 @@
+@import "utilities";
+
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.text-description {
+  @extend %text-description;
+
+  margin: 2em 0 3em;
+}

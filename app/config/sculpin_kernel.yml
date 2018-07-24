@@ -1,0 +1,17 @@
+sculpin_content_types:
+  posts:
+    enabled: false
+
+sculpin:
+  ignore: ['**/_*.scss']
+  permalink: none
+
+dlp_mail:
+  subject: 'New offer for domain %s'
+  recipient:
+    name: ~
+    email: ~
+  recaptcha:
+
+    # Secret key of ReCaptcha only if form section is visible and ReCaptcha is enabled
+    secret: ~

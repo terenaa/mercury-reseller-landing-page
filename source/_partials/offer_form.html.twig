@@ -1,0 +1,41 @@
+{% if site.form.visible %}
+    <section class="site-section">
+        <header>
+            <h2 class="site-section__header text-center text-primary">{{ site.form.header }}</h2>
+        </header>
+
+        {% if site.form.description %}
+            <p class="text-description text-center">{{ site.form.description }}</p>
+        {% endif %}
+
+        <form action="{{ theme_path('form.php') }}" id="offer-form" method="post">
+            <div class="form-group has-icon-left">
+                <input class="form-input input-lg" type="text" id="offer-form-name" name="full_name" {% if site.form.fields.name.required %}required{% endif %} placeholder="{{ site.form.fields.name.text }}{% if not site.form.fields.name.required %}{{ ' ' ~ site.form.optional }}{% endif %}">
+                <span data-feather="user" class="form-icon"></span>
+            </div>
+            <div class="form-group has-icon-left">
+                <input class="form-input input-lg" type="email" name="email" {% if site.form.fields.email.required %}required{% endif %} placeholder="{{ site.form.fields.email.text }}{% if not site.form.fields.email.required %}{{ ' ' ~ site.form.optional }}{% endif %}">
+                <span data-feather="at-sign" class="form-icon"></span>
+            </div>
+            <div class="form-group has-icon-left">
+                <input class="form-input input-lg" type="text" name="phone" {% if site.form.fields.phone.required %}required{% endif %} placeholder="{{ site.form.fields.phone.text }}{% if not site.form.fields.phone.required %}{{ ' ' ~ site.form.optional }}{% endif %}">
+                <span data-feather="phone" class="form-icon"></span>
+            </div>
+            <div class="form-group has-icon-left">
+                <div class="input-group">
+                    <input class="form-input input-lg" type="number" min="1" id="offer-form-price" name="price" {% if site.form.fields.offer.required %}required{% endif %} placeholder="{{ site.form.fields.offer.text }}{% if not site.form.fields.offer.required %}{{ ' ' ~ site.form.optional }}{% endif %}">
+                    <div class="input-group-addon">{{ site.domain.currency }}</div>
+                </div>
+                <span data-feather="shopping-cart" class="form-icon"></span>
+            </div>
+            <div class="form-group">
+                <textarea class="form-input" rows="3" name="comments" {% if site.form.fields.comments.required %}required{% endif %} placeholder="{{ site.form.fields.comments.text }}{% if not site.form.fields.comments.required %}{{ ' ' ~ site.form.optional }}{% endif %}"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="currency" value="{{ site.domain.currency }}">
+                <input type="hidden" name="domain" value="{{ site.domain.name|lower }}">
+                <input type="submit" class="btn btn-primary btn-lg btn-block g-recaptcha" data-sitekey="{{ site.form.recaptcha.public_key }}" data-callback="onSubmit" value="{{ site.form.buttons.make_offer.text }}">
+            </div>
+        </form>
+    </section>
+{% endif %}

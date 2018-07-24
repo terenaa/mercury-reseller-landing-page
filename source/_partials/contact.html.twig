@@ -1,0 +1,14 @@
+{% if site.contact.visible %}
+    <div class="columns site-section contact">
+        {% for contact in site.contact.channels|slice(0, 2) %}
+            <div class="column col-xs-12 col-sm-6 col-md-6 col-lg-12 col-xl-12 col-6 text-center site-section__card-container">
+                <div class="card contact__card">
+                    <div class="card-header">
+                        <div class="card-title h5"><span data-feather="{{ contact.type }}" class="contact__icon text-primary"></span></div>
+                    </div>
+                    <div class="card-body contact__details">{{ contact.account|replace({' ': '&nbsp;'})|raw }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

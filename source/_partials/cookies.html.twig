@@ -1,0 +1,5 @@
+{% if site.form.recaptcha.public_key and site.cookie_message %}
+    <div class="site-section">
+        <p class="text-description">{{ site.cookie_message|striptags('<a>')|raw }}</p>
+    </div>
+{% endif %}

@@ -1,0 +1,34 @@
+@import "../variables";
+
+.buy-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50vh;
+  background: $buy-now-section-background;
+
+  @media screen and (min-width: $size-md + 1) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__domain-header {
+    font-size: 1.25rem;
+
+    @media screen and (min-width: $size-sm) {
+      font-size: 1.75rem;
+    }
+
+    @media screen and (min-width: $size-md) {
+      font-size: 2rem;
+    }
+  }
+
+  &__domain-name {
+    font-weight: 700;
+    line-height: 1.75em;
+  }
+}

@@ -1,0 +1,24 @@
+{% if site.did_you_know.visible %}
+    <section class="site-section">
+        <header>
+            <h2 class="site-section__header text-center text-primary">{{ site.did_you_know.header }}</h2>
+        </header>
+
+        <div class="columns did-you-know">
+            {% for fact in site.did_you_know.facts %}
+                <div class="tile">
+                    <div class="tile-icon">
+                        <div class="">
+                            <span data-feather="info"></span>
+                        </div>
+                    </div>
+                    <div class="tile-content">
+                        <p class="tile-title">{{ fact.header }}</p>
+                        <p class="tile-subtitle text-gray">{{ fact.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            <p class="text-description">{{ site.did_you_know.provided_by }}</p>
+        </div>
+    </section>
+{% endif %}

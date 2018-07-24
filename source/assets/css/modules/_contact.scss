@@ -1,0 +1,13 @@
+@import "../utilities";
+
+.contact {
+  &__card {
+    border-color: transparent;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1px;
+  }
+}
