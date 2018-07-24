@@ -214,6 +214,8 @@ dlp_mail:
 $ vendor/bin/sculpin generate --env=prod
 ```
 
+After generating successfully deploy content of `output_prod` directory.
+
 ## Features
 * Fully responsive
 * HTML5 + CSS3
