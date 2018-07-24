@@ -1,1 +1,1 @@
-function onSubmit(token){document.getElementById("offer-form").submit()}
+function onSubmit(token){let form=document.getElementById("offer-form");if(true===form.checkValidity())form.submit()}
